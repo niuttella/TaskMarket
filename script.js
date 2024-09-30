@@ -51,7 +51,7 @@ let priceChart = new Chart(ctx, {
 
 // Update the chart
 function updateChart() {
-    priceChart.data.labels.push(`Price Update`);
+    priceChart.data.labels.push(currentPriceIndex + 1);
     priceChart.data.datasets[0].data = priceHistory;
     priceChart.update();
 }
