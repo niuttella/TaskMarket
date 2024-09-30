@@ -85,6 +85,25 @@ function sellBitcoin() {
     }
 }
 
+// Function to calculate profit
+function calculateProfit() {
+    // Final portfolio value at the end of the simulation
+    let finalPortfolioValue = cashBalance + btcHoldings * btcPrice;
+    
+    // Initial portfolio value (initial cash balance + initial BTC holdings, which is zero initially)
+    let initialPortfolioValue = initialCashBalance + initialBtcHoldings * btcPrice;
+    
+    // Calculate the profit
+    let profit = finalPortfolioValue - initialPortfolioValue;
+    
+    // Display profit notification
+    document.getElementById('notification').innerHTML = `
+        <h3>The simulation has ended.</h3>
+        <p>Your profit/loss is: $${profit.toFixed(2)}</p>
+    `;
+    document.getElementById('notification').style.display = 'block';  // Show the notification
+}
+
 // Function to update Bitcoin price every 6 seconds
 function updatePrice() {
     currentPriceIndex++;
