@@ -98,10 +98,10 @@ function calculateProfit() {
     
     // Display profit notification
     document.getElementById('notification').innerHTML = `
-        <h3>The simulation has ended.</h3>
+        // <h3>The simulation has ended.</h3>
         <p>Your profit/loss is: $${profit.toFixed(2)}</p>
     `;
-    document.getElementById('notification').style.display = 'block';  // Show the notification
+    // document.getElementById('notification').style.display = 'block';  // Show the notification
 }
 
 // Function to update Bitcoin price every 6 seconds
