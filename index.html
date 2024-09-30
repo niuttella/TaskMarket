@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Trading Simulation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Bitcoin Trading Simulation</h1>
+
+        <!-- Start Timer Button -->
+        <div class="decision-box">
+            <button onclick="startSimulation()">Start Timer</button>
+        </div>
+
+        <!-- Display current Bitcoin price -->
+        <h2>Current Bitcoin Price: $<span id="btc-price"></span></h2>
+
+        <!-- Buttons for buying and selling -->
+        <div class="decision-box">
+            <button onclick="buyBitcoin()">Buy</button>
+            <button onclick="sellBitcoin()">Sell</button>
+        </div>
+
+        <!-- Portfolio Information -->
+        <div class="portfolio">
+            <h3>Portfolio</h3>
+            <p>Cash Balance: $<span id="cash-balance">50000</span></p>
+            <p>Bitcoin Holdings: <span id="btc-holdings">0</span> BTC</p>
+            <p>Total Portfolio Value: $<span id="portfolio-value">50000</span></p>
+        </div>
+
+        <!-- Canvas for price chart -->
+        <div id="chart-container">
+            <canvas id="priceChart"></canvas>
+        </div>
+
+        <!-- Notification of end of simulation -->
+        <div id="notification" style="display: none;">
+            <h3>The simulation has ended.</h3>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
